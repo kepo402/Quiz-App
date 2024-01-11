@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yoruba Greetings Quiz</title>
+
+</head>
+<body>
+  <style>
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e2eae3;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+.quiz-container{
+    background-color: #f7f0f0;
+    
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+      
+    
+}
+.question{
+    margin: 20px 0;
+    
+}
+.options{
+    display: flex;
+    flex-direction: column;
+}
+.option{
+    margin: 5px 0;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #5c0ee2;
+    transition: background-color 0.2s;
+
+}
+.option:hover{
+background-color: #c0c0c0;
+}
+.result{
+    margin-top: 10px;
+}
+  </style>
+<div class="quiz-container">
+  <div class="question" id="question01">
+    <!-- Question 1 -->
+    1. You want to greet your dad at night in Yoruba, what would you say?
+    <div class="options">
+      <div class="option" onclick="checkAnswer('A', 'question01')">A. Ẹ káalẹ́</div>
+      <div class="option" onclick="checkAnswer('B', 'question01')">B. Ẹ káàsán</div>
+      <div class="option" onclick="checkAnswer('C', 'question01')">C. Ẹ kààárọ̀</div>
+      <div class="option" onclick="checkAnswer('D', 'question01')">D. Ẹ kúùrọ̀lẹ́</div>
+    </div>
+    <div class="result" id="result01"></div>
+  </div>
+
+  <!-- Repeat the above structure for other questions -->
+  <div class="question" id="question02">
+  2.	How would you greet your uncle in late afternoon in Yoruba?
+  <div class="options">
+    <div class="option" onclick="checkAnswer('A', 'question02')">A. Ẹ Káalẹ́</div>
+    <div class="option" onclick="checkAnswer('B', 'question02')">B. Ẹ káàsán</div>
+    <div class="option" onclick="checkAnswer('C', 'question02')">C. Ẹ káàárọ̀</div>
+    <div class="option" onclick="checkAnswer('D', 'question02')">D. Ẹ kúùrọ̀lẹ́</div>
+  </div>
+  <div class="result" id="result02"></div>
+</div>
+<div class="question" id="question03">
+  <!-- Question 3 -->
+  3.	How would you greet your friend in the afternoon in Yoruba?
+  <div class="options">
+    <div class="option" onclick="checkAnswer('A', 'question03')">A. Káàárọ̀</div>
+    <div class="option" onclick="checkAnswer('B', 'question03')">B. Káàsán</div>
+    <div class="option" onclick="checkAnswer('C', 'question03')">C. Ẹ kààárọ̀</div>
+    <div class="option" onclick="checkAnswer('D', 'question03')">D. Ẹ kúùrọ̀lẹ́</div>
+  </div>
+  <div class="result" id="result03"></div>
+</div>
+<div class="question" id="question04">
+  <!-- Question 4-->
+  4.	How would you greet your colleague in the morning in Yoruba?
+  <div class="options">
+    <div class="option" onclick="checkAnswer('A', 'question04')">A. Káàárọ̀</div>
+    <div class="option" onclick="checkAnswer('B', 'question04')">B. Káàsán</div>
+    <div class="option" onclick="checkAnswer('C', 'question04')">C. Ẹ kààárọ̀</div>
+    <div class="option" onclick="checkAnswer('D', 'question04')">D. Ẹ káàsán</div>
+  </div>
+  <div class="result" id="result04"></div>
+</div>
+<div class="question" id="question05">
+  <!-- Question 5 -->
+  5. You want to say "Thank you" to your best friend, you would say___-
+  <div class="options">
+    <div class="option" onclick="checkAnswer('A', 'question05')">A. O ṣé</div>
+    <div class="option" onclick="checkAnswer('B', 'question05')">B. Ẹ ṣé</div>
+    <div class="option" onclick="checkAnswer('C', 'question05')">C. Ó dáa</div>
+    <div class="option" onclick="checkAnswer('D', 'question05')">D. Jọ̀ọ́</div>
+  </div>
+  <div class="result" id="result05"></div>
+</div>
+<div class="question" id="question06">
+  <!-- Question 6 -->
+  6.	What does “ Ó dàá” mean?
+  <div class="options">
+    <div class="option" onclick="checkAnswer('A', 'question06')">A. Later</div>
+    <div class="option" onclick="checkAnswer('B', 'question06')">B. No</div>
+    <div class="option" onclick="checkAnswer('C', 'question06')">C. Yes</div>
+    <div class="option" onclick="checkAnswer('D', 'question06')">D. Okay</div>
+  </div>
+  <div class="result" id="result06"></div>
+</div>
+<div class="question" id="question07">
+  <!-- Question 7 -->
+  7.	______ is the response to "O ṣé/  Ẹ ṣé"
+  <div class="options">
+    <div class="option" onclick="checkAnswer('A', 'question07')">A. Ó dáa</div>
+    <div class="option" onclick="checkAnswer('B', 'question07')">B. kò tọ́pẹ́</div>
+    <div class="option" onclick="checkAnswer('C', 'question07')">C. Rárá</div>
+    <div class="option" onclick="checkAnswer('D', 'question07')">D. Ó dàbọ̀</div>
+  </div>
+  <div class="result" id="result07"></div>
+</div>
+<div class="question" id="question08">
+  <!-- Question 8 -->
+  8.	You get home and you say "Ẹ kúulé" to your mum, she responds
+  <div class="options">
+    <div class="option" onclick="checkAnswer('A', 'question08')">A. Káàárọ̀</div>
+    <div class="option" onclick="checkAnswer('B', 'question08')">B. Kúulé</div>
+    <div class="option" onclick="checkAnswer('C', 'question08')">C. Káàbọ̀</div>
+    <div class="option" onclick="checkAnswer('D', 'question08')">D. Kò tọ́pẹ́</div>
+  </div>
+  <div class="result" id="result08"></div>
+</div>
+<div class="question" id="question09">
+  <!-- Question 9 -->
+  9.	Your brother asks you a question and the answer is no
+  <div class="options">
+    <div class="option" onclick="checkAnswer('A', 'question09')">A. Bẹ́ẹ̀ni</div>
+    <div class="option" onclick="checkAnswer('B', 'question09')">B. Rárá</div>
+    <div class="option" onclick="checkAnswer('C', 'question09')">C. Ó dáa</div>
+    <div class="option" onclick="checkAnswer('D', 'question09')">D. Kò burú</div>
+  </div>
+  <div class="result" id="result09"></div>
+</div>
+<div class="question" id="question10">
+  <!-- Question 10 -->
+  10.	You can not say "báwo ni" to one of these people
+  <div class="options">
+    <div class="option" onclick="checkAnswer('A', 'question10')">A. Your Uncle</div>
+    <div class="option" onclick="checkAnswer('B', 'question10')">B. your friend</div>
+    <div class="option" onclick="checkAnswer('C', 'question10')">C. Your younger sibling</div>
+    <div class="option" onclick="checkAnswer('D', 'question10')">D. Your colleague</div>
+  </div>
+  <div class="result" id="result10"></div>
+</div>
+<div class="question" id="question11">
+  <!-- Question 11 -->
+  11.	How do you respond to "Ṣé dáadáa ni"?
+  <div class="options">
+    <div class="option" onclick="checkAnswer('A', 'question11')">A. Dáadáa ni</div>
+    <div class="option" onclick="checkAnswer('B', 'question11')">B. Rárá</div>
+    <div class="option" onclick="checkAnswer('C', 'question11')">C. Pẹ̀lẹ́</div>
+    <div class="option" onclick="checkAnswer('D', 'question11')">D. O ṣ́é</div>
+  </div>
+  <div class="result" id="result11"></div>
+</div>
+<div class="question" id="question12">
+  <!-- Question 12 -->
+  12.	How would you respond to bawo ni
+  <div class="options">
+    <div class="option" onclick="checkAnswer('A', 'question12')">A. Mo wà dáadáa</div>
+    <div class="option" onclick="checkAnswer('B', 'question12')">B. Kò sí</div>
+    <div class="option" onclick="checkAnswer('C', 'question12')">C. Rárá</div>
+    <div class="option" onclick="checkAnswer('D', 'question12')">D. Bẹ́ẹ̀ni</div>
+  </div>
+  <div class="result" id="result12"></div>
+</div>
+<div class="question" id="question13">
+  <!-- Question 13 -->
+  13.	You want to say "what about you?"  To your mum
+  <div class="options">
+    <div class="option" onclick="checkAnswer('A', 'question13')">A. Ìwọ ńkọ́</div>
+    <div class="option" onclick="checkAnswer('B', 'question13')">B. Ẹ̀yin ńkọ́</div>
+    <div class="option" onclick="checkAnswer('C', 'question13')">C. Ó dáa</div>
+    <div class="option" onclick="checkAnswer('D', 'question13')">D. Ńkọ́</div>
+  </div>
+  <div class="result" id="result13"></div>
+</div>
+<div class="question" id="question14">
+  <!-- Question 14 -->
+  14.	What does "Kú ọjọ́ mẹ́ta / Ó tó ọjọ́ mẹ́ta" mean?
+  <div class="options">
+    <div class="option" onclick="checkAnswer('A', 'question14')">A. Welcome</div>
+    <div class="option" onclick="checkAnswer('B', 'question14')">B. Well done</div>
+    <div class="option" onclick="checkAnswer('C', 'question14')">C. It's been a while</div>
+    <div class="option" onclick="checkAnswer('D', 'question14')">D. See you later</div>
+  </div>
+  <div class="result" id="result14"></div>
+</div>
+  <div class="question" id="question15"></div>
+    <!-- Question 15 -->
+    15. What is goodbye in Yoruba?
+    <div class="options">
+      <div class="option" onclick="checkAnswer('A', 'question15')">A. O ṣé</div>
+      <div class="option" onclick="checkAnswer('B', 'question15')">B. Ó dàbọ̀</div>
+      <div class="option" onclick="checkAnswer('C', 'question15')">C. Kúuṣẹ́</div>
+      <div class="option" onclick="checkAnswer('D', 'question15')">D. kò burú</div>
+    </div>
+    <div class="result" id="result15"></div>
+  </div>
+</div>
+  
+
+  <div id="quiz-results"></div>
+
+
+<script>
+const correctAnswers = {
+  question01: 'A',
+  question02: 'D',
+  question03: 'B',
+  question04: 'A',
+  question05: 'A',
+  question06: 'D',
+  question07: 'B',
+  question08: 'C',
+  question09: 'B',
+  question10: 'A',
+  question11: 'A',
+  question12: 'A',
+  question13: 'B',
+  question14: 'C',
+  question15: 'B',
+};
+
+let userScore = 0;
+
+function checkAnswer(selectedOption, questionId) {
+  const correctAnswer = correctAnswers[questionId];
+  const resultElement = document.getElementById('result' + questionId.slice(-2)); // Adjust the ID here
+  
+
+  if (selectedOption === correctAnswer) {
+    resultElement.textContent = 'Correct!';
+    resultElement.style.color = 'green';
+    userScore++;
+  } else {
+    resultElement.textContent = 'Wrong! The correct answer is ' + correctAnswer + '.';
+    resultElement.style.color = 'red';
+  }
+
+  // Disable options after answering
+  const options = document.querySelectorAll('#' + questionId + ' .option');
+  options.forEach(option => option.style.pointerEvents = 'none');
+  
+  showResultsIfFinished();
+}
+
+function showResultsIfFinished() {
+  const totalQuestions = Object.keys(correctAnswers).length;
+  const answeredQuestions = document.querySelectorAll('.result').length;
+
+  if (answeredQuestions === totalQuestions) {
+    showFinalScore();
+  }
+}
+
+function showFinalScore() {
+  const quizResultsElement = document.getElementById('quiz-results');
+  quizResultsElement.innerHTML = '<h2>Quiz Finished!</h2>';
+  quizResultsElement.innerHTML += '<p>Your score: ' + userScore + ' out of ' + Object.keys(correctAnswers).length + '</p>';
+}
+</script>
+</body>
+</html>
